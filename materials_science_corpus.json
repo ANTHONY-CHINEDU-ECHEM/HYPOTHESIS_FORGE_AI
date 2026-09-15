@@ -1,0 +1,485 @@
+{
+  "domain": "solid_state_electrolytes",
+  "records": [
+    {
+      "doc_id": "D0001",
+      "title": "Bulk ionic conductivity in Al-doped Li7La3Zr2O12",
+      "year": 2019,
+      "tags": [
+        "Garnet LLZO-family",
+        "bulk ionic conductivity"
+      ],
+      "abstract": "This study reports room-temperature ionic conductivity measurements as a function of composition, obtained via electrochemical impedance spectroscopy for Al-doped Li7La3Zr2O12, a member of the garnet llzo-family family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a trade-off in which gains in one property come at the cost of another, consistent with prior trends in related systems. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how bulk ionic conductivity relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0002",
+      "title": "Grain-boundary resistance in Ta-doped Li7La3Zr2O12",
+      "year": 2023,
+      "tags": [
+        "Garnet LLZO-family",
+        "grain-boundary resistance"
+      ],
+      "abstract": "This work isolates grain-boundary versus bulk contributions to total resistance using variable-temperature impedance analysis for Ta-doped Li7La3Zr2O12, a member of the garnet llzo-family family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show mixed results depending on processing conditions, highlighting the sensitivity of this class of materials to synthesis route. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how grain-boundary resistance relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0003",
+      "title": "Bulk ionic conductivity in Ga-doped garnet",
+      "year": 2016,
+      "tags": [
+        "Garnet LLZO-family",
+        "bulk ionic conductivity"
+      ],
+      "abstract": "This study reports room-temperature ionic conductivity measurements as a function of composition, obtained via electrochemical impedance spectroscopy for Ga-doped garnet, a member of the garnet llzo-family family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a trade-off in which gains in one property come at the cost of another, consistent with prior trends in related systems. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how bulk ionic conductivity relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0004",
+      "title": "Electrochemical stability window in Ga-doped garnet",
+      "year": 2023,
+      "tags": [
+        "Garnet LLZO-family",
+        "electrochemical stability window"
+      ],
+      "abstract": "This paper determines the oxidative and reductive stability limits via cyclic voltammetry against a Li reference for Ga-doped garnet, a member of the garnet llzo-family family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a moderate improvement over the undoped baseline, attributed to increased carrier concentration. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how electrochemical stability window relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0005",
+      "title": "Electrochemical stability window in Nb-substituted garnet",
+      "year": 2021,
+      "tags": [
+        "Garnet LLZO-family",
+        "electrochemical stability window"
+      ],
+      "abstract": "This study determines the oxidative and reductive stability limits via cyclic voltammetry against a Li reference for Nb-substituted garnet, a member of the garnet llzo-family family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a substantial improvement attributed to microstructural changes accompanying the modification. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how electrochemical stability window relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0006",
+      "title": "Bulk ionic conductivity in LAGP",
+      "year": 2021,
+      "tags": [
+        "NASICON-type oxide",
+        "bulk ionic conductivity"
+      ],
+      "abstract": "This report reports room-temperature ionic conductivity measurements as a function of composition, obtained via electrochemical impedance spectroscopy for LAGP, a member of the nasicon-type oxide family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show no statistically significant change relative to baseline, suggesting the mechanism is not dominant in this composition range. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how bulk ionic conductivity relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0007",
+      "title": "Dopant/substitution chemistry in LAGP",
+      "year": 2017,
+      "tags": [
+        "NASICON-type oxide",
+        "dopant/substitution chemistry"
+      ],
+      "abstract": "This study examines how aliovalent substitution at a specific crystallographic site changes Li-vacancy concentration and migration energetics for LAGP, a member of the nasicon-type oxide family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show no statistically significant change relative to baseline, suggesting the mechanism is not dominant in this composition range. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how dopant/substitution chemistry relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0008",
+      "title": "Grain-boundary resistance in LATP",
+      "year": 2021,
+      "tags": [
+        "NASICON-type oxide",
+        "grain-boundary resistance"
+      ],
+      "abstract": "This work isolates grain-boundary versus bulk contributions to total resistance using variable-temperature impedance analysis for LATP, a member of the nasicon-type oxide family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show no statistically significant change relative to baseline, suggesting the mechanism is not dominant in this composition range. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how grain-boundary resistance relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0009",
+      "title": "Critical current density / dendrite suppression in Ge-substituted NASICON",
+      "year": 2022,
+      "tags": [
+        "NASICON-type oxide",
+        "critical current density / dendrite suppression"
+      ],
+      "abstract": "This paper quantifies the critical current density before short-circuit in symmetric Li|electrolyte|Li cells under stepped current cycling for Ge-substituted NASICON, a member of the nasicon-type oxide family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a moderate improvement over the undoped baseline, attributed to increased carrier concentration. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how critical current density / dendrite suppression relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0010",
+      "title": "Bulk ionic conductivity in Ge-substituted NASICON",
+      "year": 2021,
+      "tags": [
+        "NASICON-type oxide",
+        "bulk ionic conductivity"
+      ],
+      "abstract": "This work reports room-temperature ionic conductivity measurements as a function of composition, obtained via electrochemical impedance spectroscopy for Ge-substituted NASICON, a member of the nasicon-type oxide family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show mixed results depending on processing conditions, highlighting the sensitivity of this class of materials to synthesis route. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how bulk ionic conductivity relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0011",
+      "title": "Processing route effects in Sc-doped NASICON",
+      "year": 2016,
+      "tags": [
+        "NASICON-type oxide",
+        "processing route effects"
+      ],
+      "abstract": "This work compares sintering or deposition conditions and their effect on relative density, microstructure, and resulting conductivity for Sc-doped NASICON, a member of the nasicon-type oxide family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a previously unreported secondary phase that complicates interpretation of the primary metric. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how processing route effects relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0012",
+      "title": "Interfacial stability with li metal in Sc-doped NASICON",
+      "year": 2018,
+      "tags": [
+        "NASICON-type oxide",
+        "interfacial stability with Li metal"
+      ],
+      "abstract": "This report characterizes the chemical and electrochemical stability of the electrolyte/Li-metal interface using XPS and symmetric-cell cycling for Sc-doped NASICON, a member of the nasicon-type oxide family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a moderate improvement over the undoped baseline, attributed to increased carrier concentration. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how interfacial stability with Li metal relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0013",
+      "title": "Grain-boundary resistance in Li3xLa2/3-xTiO3 (LLTO)",
+      "year": 2021,
+      "tags": [
+        "Perovskite-type oxide",
+        "grain-boundary resistance"
+      ],
+      "abstract": "This report isolates grain-boundary versus bulk contributions to total resistance using variable-temperature impedance analysis for Li3xLa2/3-xTiO3 (LLTO), a member of the perovskite-type oxide family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a substantial improvement attributed to microstructural changes accompanying the modification. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how grain-boundary resistance relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0014",
+      "title": "Dopant/substitution chemistry in Sr-doped LLTO",
+      "year": 2020,
+      "tags": [
+        "Perovskite-type oxide",
+        "dopant/substitution chemistry"
+      ],
+      "abstract": "This study examines how aliovalent substitution at a specific crystallographic site changes Li-vacancy concentration and migration energetics for Sr-doped LLTO, a member of the perovskite-type oxide family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a previously unreported secondary phase that complicates interpretation of the primary metric. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how dopant/substitution chemistry relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0015",
+      "title": "Processing route effects in Sr-doped LLTO",
+      "year": 2019,
+      "tags": [
+        "Perovskite-type oxide",
+        "processing route effects"
+      ],
+      "abstract": "This work compares sintering or deposition conditions and their effect on relative density, microstructure, and resulting conductivity for Sr-doped LLTO, a member of the perovskite-type oxide family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show mixed results depending on processing conditions, highlighting the sensitivity of this class of materials to synthesis route. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how processing route effects relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0016",
+      "title": "Electrochemical stability window in Nb-doped LLTO",
+      "year": 2018,
+      "tags": [
+        "Perovskite-type oxide",
+        "electrochemical stability window"
+      ],
+      "abstract": "This study determines the oxidative and reductive stability limits via cyclic voltammetry against a Li reference for Nb-doped LLTO, a member of the perovskite-type oxide family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a substantial improvement attributed to microstructural changes accompanying the modification. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how electrochemical stability window relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0017",
+      "title": "Critical current density / dendrite suppression in Li6PS5Cl",
+      "year": 2020,
+      "tags": [
+        "Sulfide argyrodite",
+        "critical current density / dendrite suppression"
+      ],
+      "abstract": "This work quantifies the critical current density before short-circuit in symmetric Li|electrolyte|Li cells under stepped current cycling for Li6PS5Cl, a member of the sulfide argyrodite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a trade-off in which gains in one property come at the cost of another, consistent with prior trends in related systems. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how critical current density / dendrite suppression relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0018",
+      "title": "Interfacial stability with li metal in Li6PS5Cl",
+      "year": 2015,
+      "tags": [
+        "Sulfide argyrodite",
+        "interfacial stability with Li metal"
+      ],
+      "abstract": "This report characterizes the chemical and electrochemical stability of the electrolyte/Li-metal interface using XPS and symmetric-cell cycling for Li6PS5Cl, a member of the sulfide argyrodite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a substantial improvement attributed to microstructural changes accompanying the modification. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how interfacial stability with Li metal relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0019",
+      "title": "Grain-boundary resistance in Li6PS5Br",
+      "year": 2024,
+      "tags": [
+        "Sulfide argyrodite",
+        "grain-boundary resistance"
+      ],
+      "abstract": "This report isolates grain-boundary versus bulk contributions to total resistance using variable-temperature impedance analysis for Li6PS5Br, a member of the sulfide argyrodite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a trade-off in which gains in one property come at the cost of another, consistent with prior trends in related systems. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how grain-boundary resistance relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0020",
+      "title": "Interfacial stability with li metal in Li6PS5Br",
+      "year": 2022,
+      "tags": [
+        "Sulfide argyrodite",
+        "interfacial stability with Li metal"
+      ],
+      "abstract": "This investigation characterizes the chemical and electrochemical stability of the electrolyte/Li-metal interface using XPS and symmetric-cell cycling for Li6PS5Br, a member of the sulfide argyrodite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a previously unreported secondary phase that complicates interpretation of the primary metric. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how interfacial stability with Li metal relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0021",
+      "title": "Dopant/substitution chemistry in Sn-substituted argyrodite",
+      "year": 2017,
+      "tags": [
+        "Sulfide argyrodite",
+        "dopant/substitution chemistry"
+      ],
+      "abstract": "This study examines how aliovalent substitution at a specific crystallographic site changes Li-vacancy concentration and migration energetics for Sn-substituted argyrodite, a member of the sulfide argyrodite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a previously unreported secondary phase that complicates interpretation of the primary metric. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how dopant/substitution chemistry relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0022",
+      "title": "Critical current density / dendrite suppression in Sn-substituted argyrodite",
+      "year": 2023,
+      "tags": [
+        "Sulfide argyrodite",
+        "critical current density / dendrite suppression"
+      ],
+      "abstract": "This paper quantifies the critical current density before short-circuit in symmetric Li|electrolyte|Li cells under stepped current cycling for Sn-substituted argyrodite, a member of the sulfide argyrodite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show no statistically significant change relative to baseline, suggesting the mechanism is not dominant in this composition range. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how critical current density / dendrite suppression relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0023",
+      "title": "Mechanical properties in Si-substituted argyrodite",
+      "year": 2018,
+      "tags": [
+        "Sulfide argyrodite",
+        "mechanical properties"
+      ],
+      "abstract": "This study reports fracture toughness and elastic modulus measurements relevant to cell assembly and pressure requirements for Si-substituted argyrodite, a member of the sulfide argyrodite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show mixed results depending on processing conditions, highlighting the sensitivity of this class of materials to synthesis route. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how mechanical properties relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0024",
+      "title": "Processing route effects in Si-substituted argyrodite",
+      "year": 2022,
+      "tags": [
+        "Sulfide argyrodite",
+        "processing route effects"
+      ],
+      "abstract": "This work compares sintering or deposition conditions and their effect on relative density, microstructure, and resulting conductivity for Si-substituted argyrodite, a member of the sulfide argyrodite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a moderate improvement over the undoped baseline, attributed to increased carrier concentration. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how processing route effects relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0025",
+      "title": "Dopant/substitution chemistry in Li10GeP2S12 (LGPS)",
+      "year": 2017,
+      "tags": [
+        "Thio-LISICON phase",
+        "dopant/substitution chemistry"
+      ],
+      "abstract": "This investigation examines how aliovalent substitution at a specific crystallographic site changes Li-vacancy concentration and migration energetics for Li10GeP2S12 (LGPS), a member of the thio-lisicon phase family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show mixed results depending on processing conditions, highlighting the sensitivity of this class of materials to synthesis route. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how dopant/substitution chemistry relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0026",
+      "title": "Mechanical properties in Li10SnP2S12",
+      "year": 2021,
+      "tags": [
+        "Thio-LISICON phase",
+        "mechanical properties"
+      ],
+      "abstract": "This paper reports fracture toughness and elastic modulus measurements relevant to cell assembly and pressure requirements for Li10SnP2S12, a member of the thio-lisicon phase family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a substantial improvement attributed to microstructural changes accompanying the modification. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how mechanical properties relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0027",
+      "title": "Electrochemical stability window in Li9.54Si1.74P1.44S11.7Cl0.3",
+      "year": 2016,
+      "tags": [
+        "Thio-LISICON phase",
+        "electrochemical stability window"
+      ],
+      "abstract": "This paper determines the oxidative and reductive stability limits via cyclic voltammetry against a Li reference for Li9.54Si1.74P1.44S11.7Cl0.3, a member of the thio-lisicon phase family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show no statistically significant change relative to baseline, suggesting the mechanism is not dominant in this composition range. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how electrochemical stability window relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0028",
+      "title": "Bulk ionic conductivity in Li9.54Si1.74P1.44S11.7Cl0.3",
+      "year": 2020,
+      "tags": [
+        "Thio-LISICON phase",
+        "bulk ionic conductivity"
+      ],
+      "abstract": "This work reports room-temperature ionic conductivity measurements as a function of composition, obtained via electrochemical impedance spectroscopy for Li9.54Si1.74P1.44S11.7Cl0.3, a member of the thio-lisicon phase family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show no statistically significant change relative to baseline, suggesting the mechanism is not dominant in this composition range. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how bulk ionic conductivity relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0029",
+      "title": "Dopant/substitution chemistry in Li3InCl6",
+      "year": 2015,
+      "tags": [
+        "Lithium halide analogue",
+        "dopant/substitution chemistry"
+      ],
+      "abstract": "This report examines how aliovalent substitution at a specific crystallographic site changes Li-vacancy concentration and migration energetics for Li3InCl6, a member of the lithium halide analogue family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show mixed results depending on processing conditions, highlighting the sensitivity of this class of materials to synthesis route. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how dopant/substitution chemistry relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0030",
+      "title": "Air/moisture sensitivity in Li3InCl6",
+      "year": 2017,
+      "tags": [
+        "Lithium halide analogue",
+        "air/moisture sensitivity"
+      ],
+      "abstract": "This paper studies degradation products formed on exposure to humid air and mitigation via surface coatings for Li3InCl6, a member of the lithium halide analogue family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a moderate improvement over the undoped baseline, attributed to increased carrier concentration. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how air/moisture sensitivity relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0031",
+      "title": "Electrochemical stability window in Li3YCl6",
+      "year": 2017,
+      "tags": [
+        "Lithium halide analogue",
+        "electrochemical stability window"
+      ],
+      "abstract": "This report determines the oxidative and reductive stability limits via cyclic voltammetry against a Li reference for Li3YCl6, a member of the lithium halide analogue family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a trade-off in which gains in one property come at the cost of another, consistent with prior trends in related systems. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how electrochemical stability window relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0032",
+      "title": "Interfacial stability with li metal in Li3YCl6",
+      "year": 2023,
+      "tags": [
+        "Lithium halide analogue",
+        "interfacial stability with Li metal"
+      ],
+      "abstract": "This paper characterizes the chemical and electrochemical stability of the electrolyte/Li-metal interface using XPS and symmetric-cell cycling for Li3YCl6, a member of the lithium halide analogue family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a moderate improvement over the undoped baseline, attributed to increased carrier concentration. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how interfacial stability with Li metal relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0033",
+      "title": "Air/moisture sensitivity in Li2ZrCl6",
+      "year": 2016,
+      "tags": [
+        "Lithium halide analogue",
+        "air/moisture sensitivity"
+      ],
+      "abstract": "This report studies degradation products formed on exposure to humid air and mitigation via surface coatings for Li2ZrCl6, a member of the lithium halide analogue family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show no statistically significant change relative to baseline, suggesting the mechanism is not dominant in this composition range. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how air/moisture sensitivity relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0034",
+      "title": "Bulk ionic conductivity in Li2ZrCl6",
+      "year": 2018,
+      "tags": [
+        "Lithium halide analogue",
+        "bulk ionic conductivity"
+      ],
+      "abstract": "This work reports room-temperature ionic conductivity measurements as a function of composition, obtained via electrochemical impedance spectroscopy for Li2ZrCl6, a member of the lithium halide analogue family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a trade-off in which gains in one property come at the cost of another, consistent with prior trends in related systems. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how bulk ionic conductivity relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0035",
+      "title": "Grain-boundary resistance in Li3ScCl6",
+      "year": 2022,
+      "tags": [
+        "Lithium halide analogue",
+        "grain-boundary resistance"
+      ],
+      "abstract": "This work isolates grain-boundary versus bulk contributions to total resistance using variable-temperature impedance analysis for Li3ScCl6, a member of the lithium halide analogue family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show mixed results depending on processing conditions, highlighting the sensitivity of this class of materials to synthesis route. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how grain-boundary resistance relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0036",
+      "title": "Dopant/substitution chemistry in PEO/LLZO composite",
+      "year": 2022,
+      "tags": [
+        "Polymer-in-ceramic composite",
+        "dopant/substitution chemistry"
+      ],
+      "abstract": "This paper examines how aliovalent substitution at a specific crystallographic site changes Li-vacancy concentration and migration energetics for PEO/LLZO composite, a member of the polymer-in-ceramic composite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a trade-off in which gains in one property come at the cost of another, consistent with prior trends in related systems. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how dopant/substitution chemistry relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0037",
+      "title": "Electrochemical stability window in PVDF-HFP/LATP composite",
+      "year": 2018,
+      "tags": [
+        "Polymer-in-ceramic composite",
+        "electrochemical stability window"
+      ],
+      "abstract": "This paper determines the oxidative and reductive stability limits via cyclic voltammetry against a Li reference for PVDF-HFP/LATP composite, a member of the polymer-in-ceramic composite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a previously unreported secondary phase that complicates interpretation of the primary metric. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how electrochemical stability window relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0038",
+      "title": "Mechanical properties in PVDF-HFP/LATP composite",
+      "year": 2018,
+      "tags": [
+        "Polymer-in-ceramic composite",
+        "mechanical properties"
+      ],
+      "abstract": "This report reports fracture toughness and elastic modulus measurements relevant to cell assembly and pressure requirements for PVDF-HFP/LATP composite, a member of the polymer-in-ceramic composite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a substantial improvement attributed to microstructural changes accompanying the modification. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how mechanical properties relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0039",
+      "title": "Air/moisture sensitivity in Garnet-polymer bilayer",
+      "year": 2016,
+      "tags": [
+        "Polymer-in-ceramic composite",
+        "air/moisture sensitivity"
+      ],
+      "abstract": "This study studies degradation products formed on exposure to humid air and mitigation via surface coatings for Garnet-polymer bilayer, a member of the polymer-in-ceramic composite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a trade-off in which gains in one property come at the cost of another, consistent with prior trends in related systems. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how air/moisture sensitivity relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0040",
+      "title": "Electrochemical stability window in Garnet-polymer bilayer",
+      "year": 2016,
+      "tags": [
+        "Polymer-in-ceramic composite",
+        "electrochemical stability window"
+      ],
+      "abstract": "This report determines the oxidative and reductive stability limits via cyclic voltammetry against a Li reference for Garnet-polymer bilayer, a member of the polymer-in-ceramic composite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a moderate improvement over the undoped baseline, attributed to increased carrier concentration. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how electrochemical stability window relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0041",
+      "title": "Interfacial stability with li metal in Poly(ionic liquid) SPE",
+      "year": 2015,
+      "tags": [
+        "Single-ion conducting polymer",
+        "interfacial stability with Li metal"
+      ],
+      "abstract": "This work characterizes the chemical and electrochemical stability of the electrolyte/Li-metal interface using XPS and symmetric-cell cycling for Poly(ionic liquid) SPE, a member of the single-ion conducting polymer family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a previously unreported secondary phase that complicates interpretation of the primary metric. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how interfacial stability with Li metal relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0042",
+      "title": "Interfacial stability with li metal in Lithiated Nafion analogue",
+      "year": 2016,
+      "tags": [
+        "Single-ion conducting polymer",
+        "interfacial stability with Li metal"
+      ],
+      "abstract": "This work characterizes the chemical and electrochemical stability of the electrolyte/Li-metal interface using XPS and symmetric-cell cycling for Lithiated Nafion analogue, a member of the single-ion conducting polymer family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show no statistically significant change relative to baseline, suggesting the mechanism is not dominant in this composition range. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how interfacial stability with Li metal relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0043",
+      "title": "Electrochemical stability window in Polycarbonate SPE",
+      "year": 2018,
+      "tags": [
+        "Single-ion conducting polymer",
+        "electrochemical stability window"
+      ],
+      "abstract": "This report determines the oxidative and reductive stability limits via cyclic voltammetry against a Li reference for Polycarbonate SPE, a member of the single-ion conducting polymer family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a previously unreported secondary phase that complicates interpretation of the primary metric. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how electrochemical stability window relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0044",
+      "title": "Interfacial stability with li metal in Li2S-P2S5 glass",
+      "year": 2024,
+      "tags": [
+        "Amorphous/glassy conductor",
+        "interfacial stability with Li metal"
+      ],
+      "abstract": "This paper characterizes the chemical and electrochemical stability of the electrolyte/Li-metal interface using XPS and symmetric-cell cycling for Li2S-P2S5 glass, a member of the amorphous/glassy conductor family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a substantial improvement attributed to microstructural changes accompanying the modification. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how interfacial stability with Li metal relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0045",
+      "title": "Dopant/substitution chemistry in Li2S-P2S5 glass",
+      "year": 2018,
+      "tags": [
+        "Amorphous/glassy conductor",
+        "dopant/substitution chemistry"
+      ],
+      "abstract": "This investigation examines how aliovalent substitution at a specific crystallographic site changes Li-vacancy concentration and migration energetics for Li2S-P2S5 glass, a member of the amorphous/glassy conductor family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a substantial improvement attributed to microstructural changes accompanying the modification. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how dopant/substitution chemistry relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0046",
+      "title": "Grain-boundary resistance in Li2S-SiS2 glass",
+      "year": 2016,
+      "tags": [
+        "Amorphous/glassy conductor",
+        "grain-boundary resistance"
+      ],
+      "abstract": "This investigation isolates grain-boundary versus bulk contributions to total resistance using variable-temperature impedance analysis for Li2S-SiS2 glass, a member of the amorphous/glassy conductor family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show no statistically significant change relative to baseline, suggesting the mechanism is not dominant in this composition range. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how grain-boundary resistance relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0047",
+      "title": "Mechanical properties in Oxysulfide glass-ceramic",
+      "year": 2015,
+      "tags": [
+        "Amorphous/glassy conductor",
+        "mechanical properties"
+      ],
+      "abstract": "This work reports fracture toughness and elastic modulus measurements relevant to cell assembly and pressure requirements for Oxysulfide glass-ceramic, a member of the amorphous/glassy conductor family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a moderate improvement over the undoped baseline, attributed to increased carrier concentration. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how mechanical properties relates to overall cell performance and manufacturability."
+    },
+    {
+      "doc_id": "D0048",
+      "title": "Air/moisture sensitivity in Oxysulfide glass-ceramic",
+      "year": 2021,
+      "tags": [
+        "Amorphous/glassy conductor",
+        "air/moisture sensitivity"
+      ],
+      "abstract": "This report studies degradation products formed on exposure to humid air and mitigation via surface coatings for Oxysulfide glass-ceramic, a member of the amorphous/glassy conductor family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a moderate improvement over the undoped baseline, attributed to increased carrier concentration. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how air/moisture sensitivity relates to overall cell performance and manufacturability."
+    }
+  ]
+}

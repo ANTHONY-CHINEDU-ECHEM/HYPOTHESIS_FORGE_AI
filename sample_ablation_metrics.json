@@ -1,0 +1,124 @@
+{
+  "baseline": {
+    "description": "Full pipeline: critic enabled, balanced judge persona.",
+    "config": {
+      "use_critic": true,
+      "judge_persona": "balanced"
+    },
+    "metrics": {
+      "total_hypotheses_considered": 6,
+      "total_critiqued": 6,
+      "acceptance_rate": 0.5,
+      "rejection_rate": 0.333,
+      "revision_rate": 0.167,
+      "mean_novelty_score": 5.852,
+      "std_novelty_score": 1.036,
+      "mean_feasibility_score": 5.482,
+      "mean_overall_score": 5.57,
+      "mean_contradictions_per_hypothesis": 0.333,
+      "per_iteration_mean_overall_score": [
+        5.293,
+        5.847
+      ],
+      "per_iteration_mean_novelty_score": [
+        5.6,
+        6.103
+      ],
+      "iteration_over_iteration_delta": 0.554,
+      "final_ranked_mean_score": 7.34,
+      "toy_simulation_success_rate": 1.0,
+      "wall_clock_seconds": 0.01
+    }
+  },
+  "no_critic": {
+    "description": "Critic step disabled \u2014 every hypothesis auto-accepted.",
+    "config": {
+      "use_critic": false,
+      "judge_persona": "balanced"
+    },
+    "metrics": {
+      "total_hypotheses_considered": 3,
+      "total_critiqued": 3,
+      "acceptance_rate": 1.0,
+      "rejection_rate": 0.0,
+      "revision_rate": 0.0,
+      "mean_novelty_score": 5.603,
+      "std_novelty_score": 0.123,
+      "mean_feasibility_score": 5.0,
+      "mean_overall_score": 5.3,
+      "mean_contradictions_per_hypothesis": 0.0,
+      "per_iteration_mean_overall_score": [
+        5.3
+      ],
+      "per_iteration_mean_novelty_score": [
+        5.603
+      ],
+      "iteration_over_iteration_delta": 0.0,
+      "final_ranked_mean_score": 5.635,
+      "toy_simulation_success_rate": 1.0,
+      "wall_clock_seconds": 0.004
+    }
+  },
+  "strict_judge": {
+    "description": "Critic enabled, strict judge persona.",
+    "config": {
+      "use_critic": true,
+      "judge_persona": "strict"
+    },
+    "metrics": {
+      "total_hypotheses_considered": 6,
+      "total_critiqued": 6,
+      "acceptance_rate": 0.0,
+      "rejection_rate": 0.833,
+      "revision_rate": 0.167,
+      "mean_novelty_score": 4.275,
+      "std_novelty_score": 0.835,
+      "mean_feasibility_score": 3.063,
+      "mean_overall_score": 3.472,
+      "mean_contradictions_per_hypothesis": 0.667,
+      "per_iteration_mean_overall_score": [
+        3.803,
+        3.14
+      ],
+      "per_iteration_mean_novelty_score": [
+        4.597,
+        3.953
+      ],
+      "iteration_over_iteration_delta": -0.663,
+      "final_ranked_mean_score": 0.0,
+      "toy_simulation_success_rate": 0.0,
+      "wall_clock_seconds": 0.008
+    }
+  },
+  "lenient_judge": {
+    "description": "Critic enabled, lenient judge persona.",
+    "config": {
+      "use_critic": true,
+      "judge_persona": "lenient"
+    },
+    "metrics": {
+      "total_hypotheses_considered": 6,
+      "total_critiqued": 6,
+      "acceptance_rate": 0.833,
+      "rejection_rate": 0.0,
+      "revision_rate": 0.167,
+      "mean_novelty_score": 6.323,
+      "std_novelty_score": 0.78,
+      "mean_feasibility_score": 6.573,
+      "mean_overall_score": 6.447,
+      "mean_contradictions_per_hypothesis": 0.0,
+      "per_iteration_mean_overall_score": [
+        6.813,
+        6.08
+      ],
+      "per_iteration_mean_novelty_score": [
+        6.473,
+        6.173
+      ],
+      "iteration_over_iteration_delta": -0.733,
+      "final_ranked_mean_score": 7.805,
+      "toy_simulation_success_rate": 1.0,
+      "wall_clock_seconds": 0.009
+    }
+  }
+}

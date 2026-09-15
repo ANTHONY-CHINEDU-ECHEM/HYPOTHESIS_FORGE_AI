@@ -1,0 +1,809 @@
+{
+  "domain": "solid_state_electrolytes",
+  "config_snapshot": {
+    "domain": "solid_state_electrolytes",
+    "n_seed_hypotheses": 3,
+    "max_iterations": 2,
+    "top_k_final": 2,
+    "novelty_weight": 0.35,
+    "feasibility_weight": 0.35,
+    "contradiction_penalty_weight": 0.3,
+    "critic_reject_threshold": 4.0,
+    "critic_revise_threshold": 7.0,
+    "embedding_backend": "tfidf",
+    "llm_model": "mock-llm-v1",
+    "judge_persona": "balanced",
+    "use_critic": true
+  },
+  "iterations": [
+    {
+      "iteration_number": 1,
+      "proposed": [
+        {
+          "id": "hyp_9f674761",
+          "parent_id": null,
+          "iteration": 1,
+          "statement": "Substituting a low-concentration dopant into sulfide argyrodites and thio-LISICON phases lattice sites will improve room-temperature ionic conductivity by promoting engineered grain-boundary chemistry via sintering-aid segregation.",
+          "mechanism": "engineered grain-boundary chemistry via sintering-aid segregation",
+          "material_family": "sulfide argyrodites and thio-LISICON phases",
+          "target_metric": "room-temperature ionic conductivity (S/cm)",
+          "rationale": "Analogous substitution strategies have shifted defect concentrations and lowered migration barriers in structurally related Li-ion conductors, suggesting a transferable design principle for this family.",
+          "status": "revised"
+        },
+        {
+          "id": "hyp_826adf5c",
+          "parent_id": null,
+          "iteration": 1,
+          "statement": "Substituting a low-concentration dopant into garnet-type oxides lattice sites will improve activation energy for Li-ion migration by promoting interfacial buffer layer formed by in-situ reaction with Li metal.",
+          "mechanism": "interfacial buffer layer formed by in-situ reaction with Li metal",
+          "material_family": "garnet-type oxides (e.g., LLZO-family)",
+          "target_metric": "activation energy for Li-ion migration (eV)",
+          "rationale": "Analogous substitution strategies have shifted defect concentrations and lowered migration barriers in structurally related Li-ion conductors, suggesting a transferable design principle for this family.",
+          "status": "rejected"
+        },
+        {
+          "id": "hyp_b20d57cb",
+          "parent_id": null,
+          "iteration": 1,
+          "statement": "Substituting a low-concentration dopant into amorphous / glassy Li-ion conductors lattice sites will improve interfacial resistance by promoting anion-site substitution.",
+          "mechanism": "anion-site substitution to widen the electrochemical stability window",
+          "material_family": "amorphous / glassy Li-ion conductors",
+          "target_metric": "interfacial resistance (ohm*cm^2)",
+          "rationale": "Analogous substitution strategies have shifted defect concentrations and lowered migration barriers in structurally related Li-ion conductors, suggesting a transferable design principle for this family.",
+          "status": "accepted"
+        }
+      ],
+      "findings": [
+        {
+          "hypothesis_id": "hyp_9f674761",
+          "query": "Substituting a low-concentration dopant into sulfide argyrodites and thio-LISICON phases lattice sites will improve room-temperature ionic conductivity by promoting engineered grain-boundary chemistry via sintering-aid segregation. engineered grain-boundary chemistry via sintering-aid segregation sulfide argyrodites and thio-LISICON phases",
+          "records": [
+            {
+              "doc_id": "D0019",
+              "title": "Grain-boundary resistance in Li6PS5Br",
+              "year": 2024,
+              "tags": [
+                "Sulfide argyrodite",
+                "grain-boundary resistance"
+              ],
+              "abstract": "This report isolates grain-boundary versus bulk contributions to total resistance using variable-temperature impedance analysis for Li6PS5Br, a member of the sulfide argyrodite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a trade-off in which gains in one property come at the cost of another, consistent with prior trends in related systems. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how grain-boundary resistance relates to overall cell performance and manufacturability.",
+              "similarity": 0.28449195623397827
+            },
+            {
+              "doc_id": "D0008",
+              "title": "Grain-boundary resistance in LATP",
+              "year": 2021,
+              "tags": [
+                "NASICON-type oxide",
+                "grain-boundary resistance"
+              ],
+              "abstract": "This work isolates grain-boundary versus bulk contributions to total resistance using variable-temperature impedance analysis for LATP, a member of the nasicon-type oxide family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show no statistically significant change relative to baseline, suggesting the mechanism is not dominant in this composition range. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how grain-boundary resistance relates to overall cell performance and manufacturability.",
+              "similarity": 0.26309001445770264
+            },
+            {
+              "doc_id": "D0035",
+              "title": "Grain-boundary resistance in Li3ScCl6",
+              "year": 2022,
+              "tags": [
+                "Lithium halide analogue",
+                "grain-boundary resistance"
+              ],
+              "abstract": "This work isolates grain-boundary versus bulk contributions to total resistance using variable-temperature impedance analysis for Li3ScCl6, a member of the lithium halide analogue family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show mixed results depending on processing conditions, highlighting the sensitivity of this class of materials to synthesis route. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how grain-boundary resistance relates to overall cell performance and manufacturability.",
+              "similarity": 0.2554742991924286
+            },
+            {
+              "doc_id": "D0013",
+              "title": "Grain-boundary resistance in Li3xLa2/3-xTiO3 (LLTO)",
+              "year": 2021,
+              "tags": [
+                "Perovskite-type oxide",
+                "grain-boundary resistance"
+              ],
+              "abstract": "This report isolates grain-boundary versus bulk contributions to total resistance using variable-temperature impedance analysis for Li3xLa2/3-xTiO3 (LLTO), a member of the perovskite-type oxide family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a substantial improvement attributed to microstructural changes accompanying the modification. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how grain-boundary resistance relates to overall cell performance and manufacturability.",
+              "similarity": 0.2337857186794281
+            },
+            {
+              "doc_id": "D0046",
+              "title": "Grain-boundary resistance in Li2S-SiS2 glass",
+              "year": 2016,
+              "tags": [
+                "Amorphous/glassy conductor",
+                "grain-boundary resistance"
+              ],
+              "abstract": "This investigation isolates grain-boundary versus bulk contributions to total resistance using variable-temperature impedance analysis for Li2S-SiS2 glass, a member of the amorphous/glassy conductor family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show no statistically significant change relative to baseline, suggesting the mechanism is not dominant in this composition range. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how grain-boundary resistance relates to overall cell performance and manufacturability.",
+              "similarity": 0.23105740547180176
+            }
+          ],
+          "scout_summary": "Prior work in this material family has largely focused on bulk conductivity optimization via cation doping, with comparatively less attention paid to the specific interfacial or grain-boundary mechanism proposed here. Several studies report similar dopant strategies applied to adjacent compositions.",
+          "closest_prior_work_gap": "Existing studies establish the general dopant-conductivity trend but do not isolate the specific mechanism-metric pairing proposed here, and none report critical-current-density data under the proposed processing route."
+        },
+        {
+          "hypothesis_id": "hyp_826adf5c",
+          "query": "Substituting a low-concentration dopant into garnet-type oxides lattice sites will improve activation energy for Li-ion migration by promoting interfacial buffer layer formed by in-situ reaction with Li metal. interfacial buffer layer formed by in-situ reaction with Li metal garnet-type oxides (e.g., LLZO-family)",
+          "records": [
+            {
+              "doc_id": "D0032",
+              "title": "Interfacial stability with li metal in Li3YCl6",
+              "year": 2023,
+              "tags": [
+                "Lithium halide analogue",
+                "interfacial stability with Li metal"
+              ],
+              "abstract": "This paper characterizes the chemical and electrochemical stability of the electrolyte/Li-metal interface using XPS and symmetric-cell cycling for Li3YCl6, a member of the lithium halide analogue family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a moderate improvement over the undoped baseline, attributed to increased carrier concentration. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how interfacial stability with Li metal relates to overall cell performance and manufacturability.",
+              "similarity": 0.270882248878479
+            },
+            {
+              "doc_id": "D0012",
+              "title": "Interfacial stability with li metal in Sc-doped NASICON",
+              "year": 2018,
+              "tags": [
+                "NASICON-type oxide",
+                "interfacial stability with Li metal"
+              ],
+              "abstract": "This report characterizes the chemical and electrochemical stability of the electrolyte/Li-metal interface using XPS and symmetric-cell cycling for Sc-doped NASICON, a member of the nasicon-type oxide family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a moderate improvement over the undoped baseline, attributed to increased carrier concentration. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how interfacial stability with Li metal relates to overall cell performance and manufacturability.",
+              "similarity": 0.2655317187309265
+            },
+            {
+              "doc_id": "D0018",
+              "title": "Interfacial stability with li metal in Li6PS5Cl",
+              "year": 2015,
+              "tags": [
+                "Sulfide argyrodite",
+                "interfacial stability with Li metal"
+              ],
+              "abstract": "This report characterizes the chemical and electrochemical stability of the electrolyte/Li-metal interface using XPS and symmetric-cell cycling for Li6PS5Cl, a member of the sulfide argyrodite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a substantial improvement attributed to microstructural changes accompanying the modification. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how interfacial stability with Li metal relates to overall cell performance and manufacturability.",
+              "similarity": 0.26463955640792847
+            },
+            {
+              "doc_id": "D0020",
+              "title": "Interfacial stability with li metal in Li6PS5Br",
+              "year": 2022,
+              "tags": [
+                "Sulfide argyrodite",
+                "interfacial stability with Li metal"
+              ],
+              "abstract": "This investigation characterizes the chemical and electrochemical stability of the electrolyte/Li-metal interface using XPS and symmetric-cell cycling for Li6PS5Br, a member of the sulfide argyrodite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a previously unreported secondary phase that complicates interpretation of the primary metric. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how interfacial stability with Li metal relates to overall cell performance and manufacturability.",
+              "similarity": 0.2571122944355011
+            },
+            {
+              "doc_id": "D0042",
+              "title": "Interfacial stability with li metal in Lithiated Nafion analogue",
+              "year": 2016,
+              "tags": [
+                "Single-ion conducting polymer",
+                "interfacial stability with Li metal"
+              ],
+              "abstract": "This work characterizes the chemical and electrochemical stability of the electrolyte/Li-metal interface using XPS and symmetric-cell cycling for Lithiated Nafion analogue, a member of the single-ion conducting polymer family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show no statistically significant change relative to baseline, suggesting the mechanism is not dominant in this composition range. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how interfacial stability with Li metal relates to overall cell performance and manufacturability.",
+              "similarity": 0.24069061875343323
+            }
+          ],
+          "scout_summary": "Prior work in this material family has largely focused on bulk conductivity optimization via cation doping, with comparatively less attention paid to the specific interfacial or grain-boundary mechanism proposed here. Several studies report similar dopant strategies applied to adjacent compositions.",
+          "closest_prior_work_gap": "Existing studies establish the general dopant-conductivity trend but do not isolate the specific mechanism-metric pairing proposed here, and none report critical-current-density data under the proposed processing route."
+        },
+        {
+          "hypothesis_id": "hyp_b20d57cb",
+          "query": "Substituting a low-concentration dopant into amorphous / glassy Li-ion conductors lattice sites will improve interfacial resistance by promoting anion-site substitution. anion-site substitution to widen the electrochemical stability window amorphous / glassy Li-ion conductors",
+          "records": [
+            {
+              "doc_id": "D0045",
+              "title": "Dopant/substitution chemistry in Li2S-P2S5 glass",
+              "year": 2018,
+              "tags": [
+                "Amorphous/glassy conductor",
+                "dopant/substitution chemistry"
+              ],
+              "abstract": "This investigation examines how aliovalent substitution at a specific crystallographic site changes Li-vacancy concentration and migration energetics for Li2S-P2S5 glass, a member of the amorphous/glassy conductor family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a substantial improvement attributed to microstructural changes accompanying the modification. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how dopant/substitution chemistry relates to overall cell performance and manufacturability.",
+              "similarity": 0.27705129981040955
+            },
+            {
+              "doc_id": "D0044",
+              "title": "Interfacial stability with li metal in Li2S-P2S5 glass",
+              "year": 2024,
+              "tags": [
+                "Amorphous/glassy conductor",
+                "interfacial stability with Li metal"
+              ],
+              "abstract": "This paper characterizes the chemical and electrochemical stability of the electrolyte/Li-metal interface using XPS and symmetric-cell cycling for Li2S-P2S5 glass, a member of the amorphous/glassy conductor family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a substantial improvement attributed to microstructural changes accompanying the modification. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how interfacial stability with Li metal relates to overall cell performance and manufacturability.",
+              "similarity": 0.20464655756950378
+            },
+            {
+              "doc_id": "D0007",
+              "title": "Dopant/substitution chemistry in LAGP",
+              "year": 2017,
+              "tags": [
+                "NASICON-type oxide",
+                "dopant/substitution chemistry"
+              ],
+              "abstract": "This study examines how aliovalent substitution at a specific crystallographic site changes Li-vacancy concentration and migration energetics for LAGP, a member of the nasicon-type oxide family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show no statistically significant change relative to baseline, suggesting the mechanism is not dominant in this composition range. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how dopant/substitution chemistry relates to overall cell performance and manufacturability.",
+              "similarity": 0.18907037377357483
+            },
+            {
+              "doc_id": "D0029",
+              "title": "Dopant/substitution chemistry in Li3InCl6",
+              "year": 2015,
+              "tags": [
+                "Lithium halide analogue",
+                "dopant/substitution chemistry"
+              ],
+              "abstract": "This report examines how aliovalent substitution at a specific crystallographic site changes Li-vacancy concentration and migration energetics for Li3InCl6, a member of the lithium halide analogue family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show mixed results depending on processing conditions, highlighting the sensitivity of this class of materials to synthesis route. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how dopant/substitution chemistry relates to overall cell performance and manufacturability.",
+              "similarity": 0.18453562259674072
+            },
+            {
+              "doc_id": "D0021",
+              "title": "Dopant/substitution chemistry in Sn-substituted argyrodite",
+              "year": 2017,
+              "tags": [
+                "Sulfide argyrodite",
+                "dopant/substitution chemistry"
+              ],
+              "abstract": "This study examines how aliovalent substitution at a specific crystallographic site changes Li-vacancy concentration and migration energetics for Sn-substituted argyrodite, a member of the sulfide argyrodite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a previously unreported secondary phase that complicates interpretation of the primary metric. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how dopant/substitution chemistry relates to overall cell performance and manufacturability.",
+              "similarity": 0.17111721634864807
+            }
+          ],
+          "scout_summary": "Prior work in this material family has largely focused on bulk conductivity optimization via cation doping, with comparatively less attention paid to the specific interfacial or grain-boundary mechanism proposed here. Several studies report similar dopant strategies applied to adjacent compositions.",
+          "closest_prior_work_gap": "Existing studies establish the general dopant-conductivity trend but do not isolate the specific mechanism-metric pairing proposed here, and none report critical-current-density data under the proposed processing route."
+        }
+      ],
+      "critiques": [
+        {
+          "hypothesis_id": "hyp_9f674761",
+          "novelty": {
+            "embedding_max_similarity": 0.3236,
+            "embedding_mean_similarity": 0.2981,
+            "nearest_neighbor_ids": [
+              "D0019",
+              "D0008",
+              "D0035",
+              "D0013",
+              "D0046"
+            ],
+            "llm_judge_score": 5.08,
+            "llm_judge_rationale": "Judged relative to the retrieved literature summary: the mechanism is a recognizable extension of known strategies rather than an entirely new principle, but the specific metric target is under-explored in the retrieved records.",
+            "combined_score": 5.23
+          },
+          "feasibility_score": 4.76,
+          "feasibility_rationale": "Processing route implied by the mechanism is achievable with standard solid-state synthesis techniques, though achieving the targeted improvement magnitude is uncertain without further compositional tuning.",
+          "contradictions": [],
+          "identified_flaws": [
+            "Rationale does not address expected mechanical/phase-purity side effects of the proposed substitution."
+          ],
+          "suggested_revision": "Narrow the claim to a specific dopant concentration range and explicitly address the grain-boundary resistance trade-off.",
+          "overall_score": 5.0,
+          "recommendation": "revise"
+        },
+        {
+          "hypothesis_id": "hyp_826adf5c",
+          "novelty": {
+            "embedding_max_similarity": 0.3103,
+            "embedding_mean_similarity": 0.2948,
+            "nearest_neighbor_ids": [
+              "D0032",
+              "D0018",
+              "D0020",
+              "D0012",
+              "D0042"
+            ],
+            "llm_judge_score": 4.06,
+            "llm_judge_rationale": "Judged relative to the retrieved literature summary: the mechanism is a recognizable extension of known strategies rather than an entirely new principle, but the specific metric target is under-explored in the retrieved records.",
+            "combined_score": 4.67
+          },
+          "feasibility_score": 3.95,
+          "feasibility_rationale": "Processing route implied by the mechanism is achievable with standard solid-state synthesis techniques, though achieving the targeted improvement magnitude is uncertain without further compositional tuning.",
+          "contradictions": [
+            "Predicted conductivity gain is difficult to reconcile with the known trade-off between dopant concentration and grain-boundary resistance reported for structurally similar systems."
+          ],
+          "identified_flaws": [
+            "Rationale does not address expected mechanical/phase-purity side effects of the proposed substitution."
+          ],
+          "suggested_revision": "Narrow the claim to a specific dopant concentration range and explicitly address the grain-boundary resistance trade-off.",
+          "overall_score": 4.01,
+          "recommendation": "reject"
+        },
+        {
+          "hypothesis_id": "hyp_b20d57cb",
+          "novelty": {
+            "embedding_max_similarity": 0.2938,
+            "embedding_mean_similarity": 0.246,
+            "nearest_neighbor_ids": [
+              "D0045",
+              "D0007",
+              "D0029",
+              "D0021",
+              "D0014"
+            ],
+            "llm_judge_score": 7.66,
+            "llm_judge_rationale": "Judged relative to the retrieved literature summary: the mechanism is a recognizable extension of known strategies rather than an entirely new principle, but the specific metric target is under-explored in the retrieved records.",
+            "combined_score": 6.9
+          },
+          "feasibility_score": 6.83,
+          "feasibility_rationale": "Processing route implied by the mechanism is achievable with standard solid-state synthesis techniques, though achieving the targeted improvement magnitude is uncertain without further compositional tuning.",
+          "contradictions": [],
+          "identified_flaws": [],
+          "suggested_revision": null,
+          "overall_score": 6.87,
+          "recommendation": "accept"
+        }
+      ],
+      "accepted_ids": [
+        "hyp_b20d57cb"
+      ],
+      "revised_ids": [
+        "hyp_9f674761"
+      ],
+      "rejected_ids": [
+        "hyp_826adf5c"
+      ],
+      "notes": ""
+    },
+    {
+      "iteration_number": 2,
+      "proposed": [
+        {
+          "id": "hyp_11007e07",
+          "parent_id": "hyp_9f674761",
+          "iteration": 2,
+          "statement": "Substituting a low-concentration dopant into amorphous / glassy Li-ion conductors lattice sites will improve room-temperature ionic conductivity by promoting gradient composite architecture.",
+          "mechanism": "gradient composite architecture to decouple bulk conduction from mechanical toughness",
+          "material_family": "amorphous / glassy Li-ion conductors",
+          "target_metric": "room-temperature ionic conductivity (S/cm)",
+          "rationale": "Analogous substitution strategies have shifted defect concentrations and lowered migration barriers in structurally related Li-ion conductors, suggesting a transferable design principle for this family.",
+          "status": "accepted"
+        },
+        {
+          "id": "hyp_1c490721",
+          "parent_id": null,
+          "iteration": 2,
+          "statement": "Substituting a low-concentration dopant into garnet-type oxides lattice sites will improve activation energy for Li-ion migration by promoting interfacial buffer layer formed by in-situ reaction with Li metal.",
+          "mechanism": "interfacial buffer layer formed by in-situ reaction with Li metal",
+          "material_family": "garnet-type oxides (e.g., LLZO-family)",
+          "target_metric": "activation energy for Li-ion migration (eV)",
+          "rationale": "Analogous substitution strategies have shifted defect concentrations and lowered migration barriers in structurally related Li-ion conductors, suggesting a transferable design principle for this family.",
+          "status": "rejected"
+        },
+        {
+          "id": "hyp_5fd703c1",
+          "parent_id": null,
+          "iteration": 2,
+          "statement": "Substituting a low-concentration dopant into amorphous / glassy Li-ion conductors lattice sites will improve activation energy for Li-ion migration by promoting anion-site substitution.",
+          "mechanism": "anion-site substitution to widen the electrochemical stability window",
+          "material_family": "amorphous / glassy Li-ion conductors",
+          "target_metric": "activation energy for Li-ion migration (eV)",
+          "rationale": "Analogous substitution strategies have shifted defect concentrations and lowered migration barriers in structurally related Li-ion conductors, suggesting a transferable design principle for this family.",
+          "status": "revised"
+        }
+      ],
+      "findings": [
+        {
+          "hypothesis_id": "hyp_11007e07",
+          "query": "Substituting a low-concentration dopant into amorphous / glassy Li-ion conductors lattice sites will improve room-temperature ionic conductivity by promoting gradient composite architecture. gradient composite architecture to decouple bulk conduction from mechanical toughness amorphous / glassy Li-ion conductors",
+          "records": [
+            {
+              "doc_id": "D0006",
+              "title": "Bulk ionic conductivity in LAGP",
+              "year": 2021,
+              "tags": [
+                "NASICON-type oxide",
+                "bulk ionic conductivity"
+              ],
+              "abstract": "This report reports room-temperature ionic conductivity measurements as a function of composition, obtained via electrochemical impedance spectroscopy for LAGP, a member of the nasicon-type oxide family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show no statistically significant change relative to baseline, suggesting the mechanism is not dominant in this composition range. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how bulk ionic conductivity relates to overall cell performance and manufacturability.",
+              "similarity": 0.22032210230827332
+            },
+            {
+              "doc_id": "D0034",
+              "title": "Bulk ionic conductivity in Li2ZrCl6",
+              "year": 2018,
+              "tags": [
+                "Lithium halide analogue",
+                "bulk ionic conductivity"
+              ],
+              "abstract": "This work reports room-temperature ionic conductivity measurements as a function of composition, obtained via electrochemical impedance spectroscopy for Li2ZrCl6, a member of the lithium halide analogue family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a trade-off in which gains in one property come at the cost of another, consistent with prior trends in related systems. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how bulk ionic conductivity relates to overall cell performance and manufacturability.",
+              "similarity": 0.21950003504753113
+            },
+            {
+              "doc_id": "D0003",
+              "title": "Bulk ionic conductivity in Ga-doped garnet",
+              "year": 2016,
+              "tags": [
+                "Garnet LLZO-family",
+                "bulk ionic conductivity"
+              ],
+              "abstract": "This study reports room-temperature ionic conductivity measurements as a function of composition, obtained via electrochemical impedance spectroscopy for Ga-doped garnet, a member of the garnet llzo-family family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a trade-off in which gains in one property come at the cost of another, consistent with prior trends in related systems. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how bulk ionic conductivity relates to overall cell performance and manufacturability.",
+              "similarity": 0.19642537832260132
+            },
+            {
+              "doc_id": "D0010",
+              "title": "Bulk ionic conductivity in Ge-substituted NASICON",
+              "year": 2021,
+              "tags": [
+                "NASICON-type oxide",
+                "bulk ionic conductivity"
+              ],
+              "abstract": "This work reports room-temperature ionic conductivity measurements as a function of composition, obtained via electrochemical impedance spectroscopy for Ge-substituted NASICON, a member of the nasicon-type oxide family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show mixed results depending on processing conditions, highlighting the sensitivity of this class of materials to synthesis route. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how bulk ionic conductivity relates to overall cell performance and manufacturability.",
+              "similarity": 0.19615516066551208
+            },
+            {
+              "doc_id": "D0001",
+              "title": "Bulk ionic conductivity in Al-doped Li7La3Zr2O12",
+              "year": 2019,
+              "tags": [
+                "Garnet LLZO-family",
+                "bulk ionic conductivity"
+              ],
+              "abstract": "This study reports room-temperature ionic conductivity measurements as a function of composition, obtained via electrochemical impedance spectroscopy for Al-doped Li7La3Zr2O12, a member of the garnet llzo-family family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a trade-off in which gains in one property come at the cost of another, consistent with prior trends in related systems. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how bulk ionic conductivity relates to overall cell performance and manufacturability.",
+              "similarity": 0.19410166144371033
+            }
+          ],
+          "scout_summary": "Prior work in this material family has largely focused on bulk conductivity optimization via cation doping, with comparatively less attention paid to the specific interfacial or grain-boundary mechanism proposed here. Several studies report similar dopant strategies applied to adjacent compositions.",
+          "closest_prior_work_gap": "Existing studies establish the general dopant-conductivity trend but do not isolate the specific mechanism-metric pairing proposed here, and none report critical-current-density data under the proposed processing route."
+        },
+        {
+          "hypothesis_id": "hyp_1c490721",
+          "query": "Substituting a low-concentration dopant into garnet-type oxides lattice sites will improve activation energy for Li-ion migration by promoting interfacial buffer layer formed by in-situ reaction with Li metal. interfacial buffer layer formed by in-situ reaction with Li metal garnet-type oxides (e.g., LLZO-family)",
+          "records": [
+            {
+              "doc_id": "D0032",
+              "title": "Interfacial stability with li metal in Li3YCl6",
+              "year": 2023,
+              "tags": [
+                "Lithium halide analogue",
+                "interfacial stability with Li metal"
+              ],
+              "abstract": "This paper characterizes the chemical and electrochemical stability of the electrolyte/Li-metal interface using XPS and symmetric-cell cycling for Li3YCl6, a member of the lithium halide analogue family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a moderate improvement over the undoped baseline, attributed to increased carrier concentration. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how interfacial stability with Li metal relates to overall cell performance and manufacturability.",
+              "similarity": 0.270882248878479
+            },
+            {
+              "doc_id": "D0012",
+              "title": "Interfacial stability with li metal in Sc-doped NASICON",
+              "year": 2018,
+              "tags": [
+                "NASICON-type oxide",
+                "interfacial stability with Li metal"
+              ],
+              "abstract": "This report characterizes the chemical and electrochemical stability of the electrolyte/Li-metal interface using XPS and symmetric-cell cycling for Sc-doped NASICON, a member of the nasicon-type oxide family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a moderate improvement over the undoped baseline, attributed to increased carrier concentration. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how interfacial stability with Li metal relates to overall cell performance and manufacturability.",
+              "similarity": 0.2655317187309265
+            },
+            {
+              "doc_id": "D0018",
+              "title": "Interfacial stability with li metal in Li6PS5Cl",
+              "year": 2015,
+              "tags": [
+                "Sulfide argyrodite",
+                "interfacial stability with Li metal"
+              ],
+              "abstract": "This report characterizes the chemical and electrochemical stability of the electrolyte/Li-metal interface using XPS and symmetric-cell cycling for Li6PS5Cl, a member of the sulfide argyrodite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a substantial improvement attributed to microstructural changes accompanying the modification. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how interfacial stability with Li metal relates to overall cell performance and manufacturability.",
+              "similarity": 0.26463955640792847
+            },
+            {
+              "doc_id": "D0020",
+              "title": "Interfacial stability with li metal in Li6PS5Br",
+              "year": 2022,
+              "tags": [
+                "Sulfide argyrodite",
+                "interfacial stability with Li metal"
+              ],
+              "abstract": "This investigation characterizes the chemical and electrochemical stability of the electrolyte/Li-metal interface using XPS and symmetric-cell cycling for Li6PS5Br, a member of the sulfide argyrodite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a previously unreported secondary phase that complicates interpretation of the primary metric. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how interfacial stability with Li metal relates to overall cell performance and manufacturability.",
+              "similarity": 0.2571122944355011
+            },
+            {
+              "doc_id": "D0042",
+              "title": "Interfacial stability with li metal in Lithiated Nafion analogue",
+              "year": 2016,
+              "tags": [
+                "Single-ion conducting polymer",
+                "interfacial stability with Li metal"
+              ],
+              "abstract": "This work characterizes the chemical and electrochemical stability of the electrolyte/Li-metal interface using XPS and symmetric-cell cycling for Lithiated Nafion analogue, a member of the single-ion conducting polymer family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show no statistically significant change relative to baseline, suggesting the mechanism is not dominant in this composition range. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how interfacial stability with Li metal relates to overall cell performance and manufacturability.",
+              "similarity": 0.24069061875343323
+            }
+          ],
+          "scout_summary": "Prior work in this material family has largely focused on bulk conductivity optimization via cation doping, with comparatively less attention paid to the specific interfacial or grain-boundary mechanism proposed here. Several studies report similar dopant strategies applied to adjacent compositions.",
+          "closest_prior_work_gap": "Existing studies establish the general dopant-conductivity trend but do not isolate the specific mechanism-metric pairing proposed here, and none report critical-current-density data under the proposed processing route."
+        },
+        {
+          "hypothesis_id": "hyp_5fd703c1",
+          "query": "Substituting a low-concentration dopant into amorphous / glassy Li-ion conductors lattice sites will improve activation energy for Li-ion migration by promoting anion-site substitution. anion-site substitution to widen the electrochemical stability window amorphous / glassy Li-ion conductors",
+          "records": [
+            {
+              "doc_id": "D0045",
+              "title": "Dopant/substitution chemistry in Li2S-P2S5 glass",
+              "year": 2018,
+              "tags": [
+                "Amorphous/glassy conductor",
+                "dopant/substitution chemistry"
+              ],
+              "abstract": "This investigation examines how aliovalent substitution at a specific crystallographic site changes Li-vacancy concentration and migration energetics for Li2S-P2S5 glass, a member of the amorphous/glassy conductor family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a substantial improvement attributed to microstructural changes accompanying the modification. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how dopant/substitution chemistry relates to overall cell performance and manufacturability.",
+              "similarity": 0.26810920238494873
+            },
+            {
+              "doc_id": "D0007",
+              "title": "Dopant/substitution chemistry in LAGP",
+              "year": 2017,
+              "tags": [
+                "NASICON-type oxide",
+                "dopant/substitution chemistry"
+              ],
+              "abstract": "This study examines how aliovalent substitution at a specific crystallographic site changes Li-vacancy concentration and migration energetics for LAGP, a member of the nasicon-type oxide family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show no statistically significant change relative to baseline, suggesting the mechanism is not dominant in this composition range. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how dopant/substitution chemistry relates to overall cell performance and manufacturability.",
+              "similarity": 0.19084978103637695
+            },
+            {
+              "doc_id": "D0029",
+              "title": "Dopant/substitution chemistry in Li3InCl6",
+              "year": 2015,
+              "tags": [
+                "Lithium halide analogue",
+                "dopant/substitution chemistry"
+              ],
+              "abstract": "This report examines how aliovalent substitution at a specific crystallographic site changes Li-vacancy concentration and migration energetics for Li3InCl6, a member of the lithium halide analogue family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show mixed results depending on processing conditions, highlighting the sensitivity of this class of materials to synthesis route. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how dopant/substitution chemistry relates to overall cell performance and manufacturability.",
+              "similarity": 0.18627235293388367
+            },
+            {
+              "doc_id": "D0043",
+              "title": "Electrochemical stability window in Polycarbonate SPE",
+              "year": 2018,
+              "tags": [
+                "Single-ion conducting polymer",
+                "electrochemical stability window"
+              ],
+              "abstract": "This report determines the oxidative and reductive stability limits via cyclic voltammetry against a Li reference for Polycarbonate SPE, a member of the single-ion conducting polymer family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a previously unreported secondary phase that complicates interpretation of the primary metric. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how electrochemical stability window relates to overall cell performance and manufacturability.",
+              "similarity": 0.18104538321495056
+            },
+            {
+              "doc_id": "D0021",
+              "title": "Dopant/substitution chemistry in Sn-substituted argyrodite",
+              "year": 2017,
+              "tags": [
+                "Sulfide argyrodite",
+                "dopant/substitution chemistry"
+              ],
+              "abstract": "This study examines how aliovalent substitution at a specific crystallographic site changes Li-vacancy concentration and migration energetics for Sn-substituted argyrodite, a member of the sulfide argyrodite family. Samples were prepared via standard solid-state or wet-chemical routes appropriate to this material class and characterized using complementary structural and electrochemical techniques. The results show a previously unreported secondary phase that complicates interpretation of the primary metric. These findings are discussed in the context of designing next-generation solid electrolytes for lithium-metal batteries, with attention to how dopant/substitution chemistry relates to overall cell performance and manufacturability.",
+              "similarity": 0.17272765934467316
+            }
+          ],
+          "scout_summary": "Prior work in this material family has largely focused on bulk conductivity optimization via cation doping, with comparatively less attention paid to the specific interfacial or grain-boundary mechanism proposed here. Several studies report similar dopant strategies applied to adjacent compositions.",
+          "closest_prior_work_gap": "Existing studies establish the general dopant-conductivity trend but do not isolate the specific mechanism-metric pairing proposed here, and none report critical-current-density data under the proposed processing route."
+        }
+      ],
+      "critiques": [
+        {
+          "hypothesis_id": "hyp_11007e07",
+          "novelty": {
+            "embedding_max_similarity": 0.2911,
+            "embedding_mean_similarity": 0.2713,
+            "nearest_neighbor_ids": [
+              "D0006",
+              "D0034",
+              "D0003",
+              "D0010",
+              "D0001"
+            ],
+            "llm_judge_score": 8.14,
+            "llm_judge_rationale": "Judged relative to the retrieved literature summary: the mechanism is a recognizable extension of known strategies rather than an entirely new principle, but the specific metric target is under-explored in the retrieved records.",
+            "combined_score": 7.2
+          },
+          "feasibility_score": 7.21,
+          "feasibility_rationale": "Processing route implied by the mechanism is achievable with standard solid-state synthesis techniques, though achieving the targeted improvement magnitude is uncertain without further compositional tuning.",
+          "contradictions": [],
+          "identified_flaws": [],
+          "suggested_revision": null,
+          "overall_score": 7.21,
+          "recommendation": "accept"
+        },
+        {
+          "hypothesis_id": "hyp_1c490721",
+          "novelty": {
+            "embedding_max_similarity": 0.3103,
+            "embedding_mean_similarity": 0.2948,
+            "nearest_neighbor_ids": [
+              "D0032",
+              "D0018",
+              "D0020",
+              "D0012",
+              "D0042"
+            ],
+            "llm_judge_score": 4.06,
+            "llm_judge_rationale": "Judged relative to the retrieved literature summary: the mechanism is a recognizable extension of known strategies rather than an entirely new principle, but the specific metric target is under-explored in the retrieved records.",
+            "combined_score": 4.67
+          },
+          "feasibility_score": 3.95,
+          "feasibility_rationale": "Processing route implied by the mechanism is achievable with standard solid-state synthesis techniques, though achieving the targeted improvement magnitude is uncertain without further compositional tuning.",
+          "contradictions": [
+            "Predicted conductivity gain is difficult to reconcile with the known trade-off between dopant concentration and grain-boundary resistance reported for structurally similar systems."
+          ],
+          "identified_flaws": [
+            "Rationale does not address expected mechanical/phase-purity side effects of the proposed substitution."
+          ],
+          "suggested_revision": "Narrow the claim to a specific dopant concentration range and explicitly address the grain-boundary resistance trade-off.",
+          "overall_score": 4.01,
+          "recommendation": "reject"
+        },
+        {
+          "hypothesis_id": "hyp_5fd703c1",
+          "novelty": {
+            "embedding_max_similarity": 0.2896,
+            "embedding_mean_similarity": 0.2476,
+            "nearest_neighbor_ids": [
+              "D0045",
+              "D0007",
+              "D0029",
+              "D0021",
+              "D0014"
+            ],
+            "llm_judge_score": 6.86,
+            "llm_judge_rationale": "Judged relative to the retrieved literature summary: the mechanism is a recognizable extension of known strategies rather than an entirely new principle, but the specific metric target is under-explored in the retrieved records.",
+            "combined_score": 6.44
+          },
+          "feasibility_score": 6.19,
+          "feasibility_rationale": "Processing route implied by the mechanism is achievable with standard solid-state synthesis techniques, though achieving the targeted improvement magnitude is uncertain without further compositional tuning.",
+          "contradictions": [],
+          "identified_flaws": [],
+          "suggested_revision": "Narrow the claim to a specific dopant concentration range and explicitly address the grain-boundary resistance trade-off.",
+          "overall_score": 6.32,
+          "recommendation": "revise"
+        }
+      ],
+      "accepted_ids": [
+        "hyp_11007e07",
+        "hyp_5fd703c1"
+      ],
+      "revised_ids": [],
+      "rejected_ids": [
+        "hyp_1c490721"
+      ],
+      "notes": ""
+    }
+  ],
+  "ranked_hypotheses": [
+    {
+      "hypothesis": {
+        "id": "hyp_11007e07",
+        "parent_id": "hyp_9f674761",
+        "iteration": 2,
+        "statement": "Substituting a low-concentration dopant into amorphous / glassy Li-ion conductors lattice sites will improve room-temperature ionic conductivity by promoting gradient composite architecture.",
+        "mechanism": "gradient composite architecture to decouple bulk conduction from mechanical toughness",
+        "material_family": "amorphous / glassy Li-ion conductors",
+        "target_metric": "room-temperature ionic conductivity (S/cm)",
+        "rationale": "Analogous substitution strategies have shifted defect concentrations and lowered migration barriers in structurally related Li-ion conductors, suggesting a transferable design principle for this family.",
+        "status": "accepted"
+      },
+      "critique": {
+        "hypothesis_id": "hyp_11007e07",
+        "novelty": {
+          "embedding_max_similarity": 0.2911,
+          "embedding_mean_similarity": 0.2713,
+          "nearest_neighbor_ids": [
+            "D0006",
+            "D0034",
+            "D0003",
+            "D0010",
+            "D0001"
+          ],
+          "llm_judge_score": 8.14,
+          "llm_judge_rationale": "Judged relative to the retrieved literature summary: the mechanism is a recognizable extension of known strategies rather than an entirely new principle, but the specific metric target is under-explored in the retrieved records.",
+          "combined_score": 7.2
+        },
+        "feasibility_score": 7.21,
+        "feasibility_rationale": "Processing route implied by the mechanism is achievable with standard solid-state synthesis techniques, though achieving the targeted improvement magnitude is uncertain without further compositional tuning.",
+        "contradictions": [],
+        "identified_flaws": [],
+        "suggested_revision": null,
+        "overall_score": 7.21,
+        "recommendation": "accept"
+      },
+      "experiment_design": {
+        "hypothesis_id": "hyp_11007e07",
+        "protocol_steps": [
+          "Synthesize target composition via solid-state reaction or co-precipitation, per the proposed dopant stoichiometry.",
+          "Sinter pressed pellets under controlled atmosphere; vary sintering temperature/time as the primary process variable.",
+          "Characterize phase purity via XRD and microstructure via SEM.",
+          "Measure ionic conductivity via electrochemical impedance spectroscopy (EIS) across a temperature series to extract activation energy.",
+          "Assemble symmetric Li|electrolyte|Li cells; measure critical current density via stepped current cycling."
+        ],
+        "independent_variables": [
+          "dopant concentration",
+          "sintering temperature"
+        ],
+        "dependent_variables": [
+          "room-temperature ionic conductivity",
+          "activation energy",
+          "critical current density"
+        ],
+        "controls": [
+          "undoped baseline composition",
+          "fixed sintering atmosphere"
+        ],
+        "toy_simulation_code": "import math\n# Toy Arrhenius model: sigma(T) = sigma0 * exp(-Ea / (k_B * T))\nk_B = 8.617333262e-5  # eV/K\nsigma0 = 1.0e4  # S/cm, prefactor (order-of-magnitude placeholder)\nEa_baseline = 0.35  # eV, undoped baseline\nEa_doped = 0.28  # eV, hypothesized reduction from doping\nT = 298.15  # K, room temperature\nsigma_baseline = sigma0 * math.exp(-Ea_baseline / (k_B * T))\nsigma_doped = sigma0 * math.exp(-Ea_doped / (k_B * T))\nimprovement_factor = sigma_doped / sigma_baseline\nprint(f'baseline_conductivity_S_cm={sigma_baseline:.6e}')\nprint(f'doped_conductivity_S_cm={sigma_doped:.6e}')\nprint(f'improvement_factor={improvement_factor:.3f}')\n",
+        "predicted_outcome": "A reduction in activation energy of ~0.05-0.10 eV from doping should yield a room-temperature conductivity improvement on the order of 5-15x, per the toy Arrhenius model, before accounting for grain-boundary resistance penalties.",
+        "simulation_result": {
+          "executed": true,
+          "stdout": "baseline_conductivity_S_cm=1.212761e-02\ndoped_conductivity_S_cm=1.849355e-01\nimprovement_factor=15.249\n",
+          "error": null,
+          "parsed_metrics": {
+            "baseline_conductivity_S_cm": 0.01212761,
+            "doped_conductivity_S_cm": 0.1849355,
+            "improvement_factor": 15.249
+          },
+          "runtime_seconds": 0.0003
+        }
+      },
+      "final_score": 7.51,
+      "rank": 1
+    },
+    {
+      "hypothesis": {
+        "id": "hyp_b20d57cb",
+        "parent_id": null,
+        "iteration": 1,
+        "statement": "Substituting a low-concentration dopant into amorphous / glassy Li-ion conductors lattice sites will improve interfacial resistance by promoting anion-site substitution.",
+        "mechanism": "anion-site substitution to widen the electrochemical stability window",
+        "material_family": "amorphous / glassy Li-ion conductors",
+        "target_metric": "interfacial resistance (ohm*cm^2)",
+        "rationale": "Analogous substitution strategies have shifted defect concentrations and lowered migration barriers in structurally related Li-ion conductors, suggesting a transferable design principle for this family.",
+        "status": "accepted"
+      },
+      "critique": {
+        "hypothesis_id": "hyp_b20d57cb",
+        "novelty": {
+          "embedding_max_similarity": 0.2938,
+          "embedding_mean_similarity": 0.246,
+          "nearest_neighbor_ids": [
+            "D0045",
+            "D0007",
+            "D0029",
+            "D0021",
+            "D0014"
+          ],
+          "llm_judge_score": 7.66,
+          "llm_judge_rationale": "Judged relative to the retrieved literature summary: the mechanism is a recognizable extension of known strategies rather than an entirely new principle, but the specific metric target is under-explored in the retrieved records.",
+          "combined_score": 6.9
+        },
+        "feasibility_score": 6.83,
+        "feasibility_rationale": "Processing route implied by the mechanism is achievable with standard solid-state synthesis techniques, though achieving the targeted improvement magnitude is uncertain without further compositional tuning.",
+        "contradictions": [],
+        "identified_flaws": [],
+        "suggested_revision": null,
+        "overall_score": 6.87,
+        "recommendation": "accept"
+      },
+      "experiment_design": {
+        "hypothesis_id": "hyp_b20d57cb",
+        "protocol_steps": [
+          "Synthesize target composition via solid-state reaction or co-precipitation, per the proposed dopant stoichiometry.",
+          "Sinter pressed pellets under controlled atmosphere; vary sintering temperature/time as the primary process variable.",
+          "Characterize phase purity via XRD and microstructure via SEM.",
+          "Measure ionic conductivity via electrochemical impedance spectroscopy (EIS) across a temperature series to extract activation energy.",
+          "Assemble symmetric Li|electrolyte|Li cells; measure critical current density via stepped current cycling."
+        ],
+        "independent_variables": [
+          "dopant concentration",
+          "sintering temperature"
+        ],
+        "dependent_variables": [
+          "room-temperature ionic conductivity",
+          "activation energy",
+          "critical current density"
+        ],
+        "controls": [
+          "undoped baseline composition",
+          "fixed sintering atmosphere"
+        ],
+        "toy_simulation_code": "import math\n# Toy Arrhenius model: sigma(T) = sigma0 * exp(-Ea / (k_B * T))\nk_B = 8.617333262e-5  # eV/K\nsigma0 = 1.0e4  # S/cm, prefactor (order-of-magnitude placeholder)\nEa_baseline = 0.35  # eV, undoped baseline\nEa_doped = 0.28  # eV, hypothesized reduction from doping\nT = 298.15  # K, room temperature\nsigma_baseline = sigma0 * math.exp(-Ea_baseline / (k_B * T))\nsigma_doped = sigma0 * math.exp(-Ea_doped / (k_B * T))\nimprovement_factor = sigma_doped / sigma_baseline\nprint(f'baseline_conductivity_S_cm={sigma_baseline:.6e}')\nprint(f'doped_conductivity_S_cm={sigma_doped:.6e}')\nprint(f'improvement_factor={improvement_factor:.3f}')\n",
+        "predicted_outcome": "A reduction in activation energy of ~0.05-0.10 eV from doping should yield a room-temperature conductivity improvement on the order of 5-15x, per the toy Arrhenius model, before accounting for grain-boundary resistance penalties.",
+        "simulation_result": {
+          "executed": true,
+          "stdout": "baseline_conductivity_S_cm=1.212761e-02\ndoped_conductivity_S_cm=1.849355e-01\nimprovement_factor=15.249\n",
+          "error": null,
+          "parsed_metrics": {
+            "baseline_conductivity_S_cm": 0.01212761,
+            "doped_conductivity_S_cm": 0.1849355,
+            "improvement_factor": 15.249
+          },
+          "runtime_seconds": 0.0004
+        }
+      },
+      "final_score": 7.17,
+      "rank": 2
+    }
+  ],
+  "total_hypotheses_considered": 6,
+  "wall_clock_seconds": 0.009
+}
