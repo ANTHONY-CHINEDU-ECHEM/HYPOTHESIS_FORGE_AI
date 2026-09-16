@@ -1,279 +1,252 @@
-# HypothesisForge
+**HYPOTHESISFORGE**
 
-**Multi-agent scientific hypothesis generator & critic**, domain-grounded in
-**solid-state electrolyte materials for lithium-metal batteries**.
+A rigorously engineered multi-agent system for the automated generation, literature grounding, critical evaluation, iterative refinement, and ranked prioritisation of scientific research hypotheses.Specialised for the high-stakes domain of solid-state electrolyte materials for lithium-metal batteries, HypothesisForge does more than propose ideas. It subjects every candidate hypothesis to a disciplined cycle of evidence retrieval, multi-criteria critique, revision under explicit feedback, and experimental sketching complete with executable toy numerical simulations. 
 
-Four specialized agents — **Ideator**, **Literature Scout**, **Critic**, and
-**Synthesizer** — run in an iterative loop, orchestrated by a small
-LangGraph-style state graph, to propose, ground, critique, revise, and rank
-research hypotheses, then sketch an experimental protocol (including a toy
-numerical simulation) for the survivors.
+The entire process is orchestrated by a compact, dependency-free state graph deliberately modelled on LangGraph’s programming interface.What distinguishes HypothesisForge from generic “research agent” templates is its scientific ambition: it is built to answer a measurable question—does the multi-agent revise-and-resubmit loop actually improve hypothesis quality across iterations? An integrated ablation harness systematically tests that claim by comparing configurations with and without the Critic, and across different judge personas, producing quantitative metrics and human-readable reports.
 
-This is not a generic "research agent" template: it is built around
-**measuring whether the multi-agent loop actually improves hypothesis
-quality across iterations**, with a built-in ablation harness to test that
-claim (with/without Critic, and across judge personas).
+<img width="615" height="310" alt="Screenshot 2026-09-16 at 06 38 47" src="https://github.com/user-attachments/assets/6b32b105-839f-4422-a120-c405b7f365aa" />
 
-```
-                 ┌────────────┐
-      ┌─────────▶│  Ideator   │  proposes / revises hypotheses
-      │          └─────┬──────┘
-      │                │
- loop back        ┌────▼──────┐
- (revise or       │ Lit Scout │  local corpus search (tool use) + LLM synthesis
- more budget)     └────┬──────┘
-      │                │
-      │          ┌─────▼──────┐
-      └──────────┤   Critic   │  novelty (embeddings + LLM judge) + feasibility
-                 └─────┬──────┘   + contradiction check
-                       │ accept
-                 ┌─────▼───────┐
-                 │ Synthesizer │  experiment design + toy simulation + ranking
-                 └─────────────┘
-```
 
-## Why this domain, and why it's grounded rather than generic
+**WHY THIS DOMAIN AND WHY GROUNDING MATTERS**
 
-The domain profile (`hypothesisforge/config.py::DomainProfile`) encodes:
-- A precise **scope statement** the Ideator is instructed to respect (in/out
-  of scope material classes).
-- A fixed vocabulary of **known material families** (garnet oxides,
-  sulfide argyrodites, lithium halides, polymer composites, etc.) and
-  **key metrics** (ionic conductivity, critical current density,
-  activation energy, ...) that every hypothesis must engage with.
-- A **48-record local literature corpus**
-  (`data/corpus/materials_science_corpus.json`) of original, synthetically
-  generated but domain-realistic abstracts spanning these material
-  families and common experimental angles (bulk conductivity, grain
-  boundary resistance, dopant chemistry, interfacial stability, dendrite
-  suppression, processing effects, mechanical properties, air
-  sensitivity, electrochemical stability window). See
-  `build_corpus.py` for the generation logic — this corpus is intentionally
-  synthetic (not scraped/copied from real papers) so the project ships
-  with no licensing ambiguity and fully reproducible outputs.
+Scientific hypothesis generation is only as valuable as the constraints under which it operates. A free-form language model can invent plausible-sounding statements about almost any topic; HypothesisForge refuses that luxury. Every component is tightly coupled to a carefully engineered domain profile.
 
-Swapping `DomainProfile` + corpus retargets the whole system at a different
-narrow domain (cognitive psychology, climate modeling, ...) with **zero
-changes to agent or orchestration code** — see "Retargeting to a new
-domain" below.
+The DomainProfile class (hypothesisforge/config.py) encodes three critical layers of grounding:Scope Statement
+An explicit declaration of in-scope and out-of-scope material classes. The Ideator is instructed to respect these boundaries at every proposal and revision step, preventing drift into chemically or electrochemically unrealistic territory.
 
-## Quickstart
+**CANONICAL VOCABULARY**
 
-```bash
+A fixed set of material families (garnet oxides, sulfide argyrodites, lithium halides, polymer composites, and others) and performance metrics (ionic conductivity, critical current density, activation energy, interfacial stability, mechanical robustness, etc.). Every hypothesis must engage with these concepts; the system does not reward vague or unmeasurable claims.
+
+
+**LOCAL LITERATURE CORPUS**
+
+
+A curated collection of 48 original, synthetically generated but domain-realistic abstracts (data/corpus/materials_science_corpus.json). These records span the principal material families and common experimental angles: bulk conductivity, grain-boundary resistance, dopant chemistry, interfacial stability, dendrite suppression, processing effects, mechanical properties, air sensitivity, and electrochemical stability windows. The corpus is produced by build_corpus.py and is intentionally synthetic—ensuring the project ships with zero licensing ambiguity and fully reproducible outputs.
+
+Because domain knowledge lives entirely in the DomainProfile and the associated corpus, the same agent and orchestration code can be retargeted to an entirely different scientific niche (cognitive psychology, climate modelling, catalysis, etc.) by swapping only those two assets. No agent logic or pipeline wiring needs to change.
+
+
+QUICK START
+
+HypothesisForge is designed for both offline reproducibility and live model evaluation.
+
+# Environment setup
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
-# Fully offline demo run (deterministic mock LLM, no API key required):
+# Fully offline demonstration
+# Uses a deterministic MockLLMClient — no API key required
 python -m hypothesisforge.cli run --iterations 3 --seeds 4 --top-k 3
 
-# Save the full structured result:
+# Persist the complete structured result
 python -m hypothesisforge.cli run --iterations 3 --out examples/my_run.json
 
-# Run against the real Anthropic API instead:
+# Live evaluation against the Anthropic API
 export ANTHROPIC_API_KEY=sk-...
 python -m hypothesisforge.cli run --live --iterations 3
 
-# Ablation study (with/without critic, judge personas):
-python -m hypothesisforge.cli ablate --out examples/ablation_report.md \
-                                       --json-out examples/ablation_metrics.json
-```
+# Full ablation study
+python -m hypothesisforge.cli ablate \
+  --out examples/ablation_report.md \
+  --json-out examples/ablation_metrics.json
 
-Sample outputs from an offline run are checked in at
-`examples/sample_run_output.json` and `examples/sample_ablation_report.md`
-so you can see the shape of the output without running anything.
 
-## Running the tests
+Sample outputs generated under the offline regime are checked into the repository (examples/sample_run_output.json and examples/sample_ablation_report.md) so that the shape and richness of the results can be inspected without executing any code.
 
-```bash
+**RUNNING THE TEST SUITE**
+
 pip install -r requirements.txt
 pytest -q
-```
 
-43 tests cover: schema validation, embedding/corpus search, novelty scoring
-math, the sandboxed simulation tool (including timeout and import-blocking
-behavior), the graph engine in isolation, each agent individually, the full
-pipeline end-to-end, and the ablation harness.
+Forty-three carefully designed tests exercise every critical layer of the system:
 
-## The four agents
+- Schema validation for all inter-agent contracts  
 
-### Ideator (`agents/ideator.py`)
-Proposes new, specific, mechanistic hypotheses constrained to the domain's
-scope, material families, and metrics — and explicitly avoids duplicating
-hypotheses already under consideration. On a "revise" verdict from the
-Critic, `IdeatorAgent.revise()` produces a new hypothesis linked via
-`parent_id`, incorporating the Critic's `suggested_revision`.
+- Embedding backends and corpus search correctness  
 
-### Literature Scout (`agents/literature_scout.py`)
-The explicit **tool-use** agent: calls `tools/corpus_search.py`
-(`CorpusIndex.search`, a deterministic TF-IDF/embedding similarity search
-over the local corpus — no LLM involved) to retrieve the most related
-records, then prompts the LLM to *synthesize* — summarize what's already
-known and identify the specific gap between the hypothesis and prior work.
-The LLM never invents literature from parametric memory; it only reasons
-over what the tool actually retrieved.
+- Novelty-scoring mathematics  
 
-### Critic (`agents/critic.py`)
-Checks **novelty**, **feasibility**, and **contradictions**:
-- Novelty is computed by `tools/novelty_scorer.py`, which fuses an
-  **embedding-similarity signal** (objective, lexical/semantic) with an
-  **LLM-as-judge score** (conceptual/mechanistic novelty) — the classic
-  failure mode of embedding-only novelty scoring (a paraphrase of existing
-  work scores as "similar" even if never explicitly framed that way) is
-  mitigated by the judge component, and vice versa (LLM judges are
-  over-generous without a grounding signal).
-- Feasibility and contradiction-checking are pure LLM-judge calls, reading
-  the Literature Scout's findings.
-- `overall_score` is **recomputed programmatically** from `RunConfig`
-  weights (`novelty_weight`, `feasibility_weight`,
-  `contradiction_penalty_weight`) rather than trusted verbatim from the
-  LLM's own arithmetic — this is what makes the scoring policy tunable for
-  the ablation study instead of being an opaque model output.
+- Sandboxed simulation tool (timeout enforcement, import blocking, metric parsing)  
 
-### Synthesizer (`agents/synthesizer.py`)
-For every hypothesis that survives critique, produces a concrete
-experimental protocol (steps, independent/dependent variables, controls)
-**and** a short, self-contained **toy simulation** (e.g. an Arrhenius
-conductivity model) which is actually executed via the sandboxed
-`tools/simulation.py` tool. Successfully-executing simulations receive a
-small ranking bonus, and parsed `key=value` metrics from simulation stdout
-are attached to the result. Finally ranks all survivors by final score.
+- Graph engine isolation  
 
-## Multi-agent orchestration
+- Individual agent behavior  
 
-`orchestration/graph.py` implements a small, dependency-free graph engine
-deliberately modeled on **LangGraph's** programming model: named nodes
-(`state -> state` functions), `add_edge`, `add_conditional_edges` (a router
-function returning a path key), a reserved `END` sentinel, and
-`.compile().invoke(state)`. No external orchestration package is required
-to run this project — a `max_steps` guard also prevents runaway loops if a
-router is misconfigured.
+- Full end-to-end pipeline execution  
 
-`orchestration/pipeline.py` (`HypothesisForgePipeline`) wires the four
-agents into this graph:
+- Ablation harness integrity
 
-```
-ideate → scout → critic ──router──▶ ideate      (more revision/iteration budget)
-                              └────▶ synthesize → END
-```
+THE FOUR SPECIALISED AGENTS
 
-The router (`_route_after_critic`) loops back to `ideate` while iteration
-budget remains **and** either (a) hypotheses are queued for revision, or
-(b) fewer hypotheses have been accepted than `top_k_final` requests.
-Revised hypotheses are re-proposed by the Ideator (linked via `parent_id`)
-and re-run through Scout → Critic in the next iteration, closing the loop.
+1. Ideator (agents/ideator.py)
 
-### Swapping in real LangGraph
+The Ideator is the creative engine of the system, yet creativity is deliberately constrained. It generates specific, mechanistic hypotheses that:
 
-Because `StateGraph.add_node` / `add_edge` / `add_conditional_edges` /
-`compile()` mirror LangGraph's actual API surface, replacing
-`orchestration/graph.py`'s implementation with:
+- Remain inside the domain’s declared scope  
 
-```python
+- Reference only recognised material families  
+
+- Engage measurable performance metrics  
+
+- Explicitly avoid duplicating hypotheses already under active consideration
+
+
+When the Critic returns a “revise” verdict, IdeatorAgent.revise() produces a new hypothesis linked to its predecessor via a parent_id. The revision incorporates the Critic’s concrete suggested_revision, closing the feedback loop.
+
+
+2. Literature Scout (agents/literature_scout.py)
+
+The Literature Scout is the system’s explicit tool-using agent. It never relies on the language model’s parametric memory for literature claims. Instead it:
+
+- Invokes tools/corpus_search.py (CorpusIndex.search)—a deterministic TF-IDF / embedding similarity search over the local corpus.  
+
+- Retrieves the most relevant records.  
+
+- Prompts the LLM to synthesise a summary of existing knowledge and to articulate the precise gap between the current hypothesis and prior work.
+
+This architecture guarantees that every literature statement is traceable to an actual retrieved document.
+
+3. Critic (agents/critic.py)
+
+The Critic performs a multi-axis evaluation of each hypothesis:
+
+- Novelty:
+
+Computed by tools/novelty_scorer.py. The scorer fuses an objective embedding-similarity signal with an LLM-as-judge conceptual/mechanistic score. This hybrid design mitigates the classic failure modes of each signal in isolation: pure embedding methods treat paraphrases of known work as “similar,” while pure LLM judges tend to be over-generous without grounding.  
+
+- Feasibility:
+
+An LLM judge assesses experimental practicality in light of the Literature Scout’s findings.  
+Contradiction Detection, The same judge identifies logical or empirical conflicts with retrieved literature.
+
+Crucially, the final overall_score is recomputed programmatically from configurable weights in RunConfig (novelty_weight, feasibility_weight, contradiction_penalty_weight). The system never trusts the LLM’s own arithmetic. This design choice makes scoring policy fully transparent and tuneable for ablation studies.
+
+
+4. Synthesiser (agents/synthesizer.py)
+
+For every hypothesis that survives critique, the Synthesiser delivers two concrete artifacts:
+
+- A detailed experimental protocol specifying steps, independent and dependent variables, and controls.  
+
+- A short, self-contained toy numerical simulation (for example, a simple Arrhenius conductivity model).
+
+The simulation is executed inside the restricted environment provided by tools/simulation.py. Successfully executing simulations receive a modest ranking bonus; any key=value metrics printed to stdout are parsed and attached to the final result. Surviving hypotheses are then ranked by their composite score.
+
+**MULTI AGENT ORCHESTRATION**
+
+At the centre of HypothesisForge lies a minimal, dependency-free graph engine (orchestration/graph.py) that deliberately mirrors LangGraph’s programming model:
+
+- Named nodes that transform state (state → state)  
+
+- Explicit edges (add_edge)  
+
+- Conditional edges driven by a router function (add_conditional_edges)  
+
+- A reserved END sentinel  
+
+- Compilation and invocation (.compile().invoke(state))
+
+A max_steps guard prevents runaway loops should a router be misconfigured. No external orchestration package is required to run the system.
+
+
+**HYPOTHESISFORGE PIPELINE** (orchestration/pipeline.py)
+
+wires the four agents into the following control flow:
+
+<img width="729" height="57" alt="Screenshot 2026-09-16 at 06 40 41" src="https://github.com/user-attachments/assets/5671e56f-3c5f-4cec-87f2-f6b1689818aa" />
+
+
+The router (_route_after_critic) continues the loop while iteration budget remains and either:Hypotheses are queued for revision, or Fewer hypotheses have been accepted than the target top_k_final.
+
+Revised hypotheses are re-proposed by the Ideator (linked via parent_id) and re-evaluated by Scout → Critic, forming a closed scientific feedback cycle.
+
+
+**SEAMLESS MIGRATION TO REAL LANGRAPH**
+
+Because the local graph API surface matches LangGraph’s, replacing the implementation is a mechanical change:
+
 from langgraph.graph import StateGraph, END
-```
 
-and adapting `PipelineState` to a `TypedDict` (LangGraph's expected state
-shape) is a small, mechanical change — the rest of `pipeline.py` does not
-need to change.
+Adapting PipelineState to a TypedDict is the only additional step; the remainder of pipeline.py continues to function unchanged.
 
-## Novelty scoring in detail
+NOVELTY SCORING IN DETAIL
 
-`tools/novelty_scorer.compute_novelty()`:
+The hybrid novelty function (tools/novelty_scorer.compute_novelty()) is defined as:
 
-```
-embedding_component = 10 * (1 - max_similarity ** 0.7)   # in [0, 10]
-combined_score = (embedding_component * embedding_weight
-                   + llm_judge_score * judge_weight) / (embedding_weight + judge_weight)
-```
 
-Default weights: `embedding_weight=0.4`, `judge_weight=0.6` (the judge gets
-more say since it can detect conceptual novelty the embedding can't). Both
-weights, and the embedding backend itself, are configurable — see
-`--embedding-backend sentence-transformers` for a higher-fidelity (but
-model-download-requiring) alternative to the default TF-IDF backend.
+embedding_component = 10 × (1 − max_similarity^0.7)     # scaled to [0, 10]
+combined_score = (embedding_component × embedding_weight
+                  + llm_judge_score × judge_weight)
+                 / (embedding_weight + judge_weight)
 
-## Simulation hooks
 
-`tools/simulation.run_toy_simulation()` executes Synthesizer-authored
-Python snippets in a restricted namespace: a curated builtins allowlist, an
-import allowlist (`math`, `statistics`, `random`, `itertools`,
-`functools`, plus `numpy` if installed), a wall-clock timeout enforced via
-a daemon worker thread, and stdout-only capture (no filesystem/network
-access is exposed through the allowed builtins). `key=value` lines printed
-to stdout are parsed into `SimulationResult.parsed_metrics`. This is
-intentionally narrow — it is a toy-model sanity-check tool, not a
-general-purpose code execution sandbox, and is not intended to execute
-untrusted code from outside this pipeline.
+SIMULATION ENVIRONMENT
 
-## Ablation studies
+Toy simulations authored by the Synthesiser are executed by tools/simulation.run_toy_simulation() under strict sandbox constraints:
 
-```bash
-python -m hypothesisforge.cli ablate --iterations 3 --seeds 4
-```
+- A curated allowlist of builtins  
 
-Runs four variants against the same corpus and (for the mock LLM) the same
-random seed basis, so proposals are comparable:
+- An import allowlist limited to math, statistics, random, itertools, functools, and numpy (if installed)  
 
-| Variant | What changes |
-|---|---|
-| `baseline` | Critic enabled, balanced judge persona |
-| `no_critic` | Critic step neutralized — every hypothesis auto-accepted with only an embedding-based novelty proxy, no feasibility/contradiction screening, no revision loop |
-| `strict_judge` | Critic enabled, harsher scoring persona |
-| `lenient_judge` | Critic enabled, more generous scoring persona |
+- Wall-clock timeout enforced by a daemon worker thread  
 
-`evaluation/metrics.py` computes acceptance/rejection/revision rates, mean
-novelty/feasibility/overall scores, mean contradictions per hypothesis,
-**per-iteration mean overall score** (to show whether the revise-and-
-resubmit loop measurably improves quality across iterations —
-`iteration_over_iteration_delta`), toy-simulation success rate, and wall
-clock time. `evaluation/ablation.render_ablation_report_markdown()` turns
-this into a comparison table + interpretation notes (see
-`examples/sample_ablation_report.md` for real output).
+- Stdout-only capture (no filesystem or network access is exposed)
 
-To use genuinely different judge *models* (rather than personas) against
-the live API, set a different `RunConfig.llm_model` per variant in your own
-script calling `run_ablation_study()` — the harness structure is identical.
+Printed lines of the form key=value are automatically parsed into structured metrics attached to the SimulationResult. The environment is intentionally narrow: it functions as a rapid order-of-magnitude sanity check, not a general-purpose code-execution sandbox, and is not intended for untrusted external code.
 
-## Retargeting to a new domain
 
-1. Add a new `DomainProfile` to `hypothesisforge/config.py` and register it
-   in `DOMAIN_REGISTRY`.
-2. Write (or generate, see `build_corpus.py` as a template) a local corpus
-   JSON file at the path your new profile's `corpus_path` points to, with
-   `{"domain": ..., "records": [{"doc_id", "title", "year", "tags",
-   "abstract"}, ...]}`.
-3. Nothing in `agents/`, `orchestration/`, or `tools/` needs to change —
-   prompts pull scope/families/metrics from `DomainProfile` at call time.
-
-## Project layout
-
-```
 hypothesisforge/
-  config.py            domain profile(s) + RunConfig (all tunable knobs)
-  schemas.py            Pydantic contracts passed between agents
-  llm_client.py          AnthropicLLMClient (live) + MockLLMClient (offline/deterministic)
-  prompts.py             per-agent system/user prompt templates
-  agents/                Ideator, Literature Scout, Critic, Synthesizer
-  tools/                 embeddings, corpus search, novelty scorer, sandboxed simulation
-  orchestration/         graph.py (LangGraph-style engine), state.py, pipeline.py
-  evaluation/            metrics.py, ablation.py
-  cli.py                 `run` and `ablate` commands
-data/corpus/              48-record synthetic literature corpus (materials science)
-build_corpus.py            script that generated the corpus (for reference/regeneration)
-tests/                     43 tests across schemas, tools, agents, orchestration, ablation
-examples/                  sample run output + sample ablation report (offline mode)
-```
 
-## Known limitations
+├── config.py              Domain profiles and RunConfig (all tunable knobs)
 
-- The offline `MockLLMClient` produces plausible, schema-valid, but
-  templated text — it demonstrates the *pipeline mechanics* (agent
-  hand-offs, scoring math, iteration loop, ablation comparisons)
-  faithfully, but hypothesis *content* quality should be evaluated using
-  `--live` against a real model.
-- The local corpus is synthetic (see above) — for a research-grade
-  deployment, swap `tools/corpus_search.py` for a real literature API
-  (Semantic Scholar, arXiv) behind the same `CorpusIndex.search()`
-  interface.
-- The toy simulations are order-of-magnitude sanity checks (e.g. a bare
-  Arrhenius model), not substitutes for DFT/MD or real lab work.
+├── schemas.py             Pydantic contracts exchanged between agents
+
+├── llm_client.py          AnthropicLLMClient (live) + MockLLMClient (offline/deterministic)
+
+├── prompts.py             Per-agent system and user prompt templates
+
+├── agents/                Ideator · Literature Scout · Critic · Synthesizer
+
+├── tools/                 Embeddings · corpus search · novelty scorer · sandboxed simulation
+
+├── orchestration/         graph.py (LangGraph-style engine) · state.py · pipeline.py
+
+├── evaluation/            metrics.py · ablation.py
+
+└── cli.py                 `run` and `ablate` entry points
+
+data/corpus/               48-record synthetic materials-science literature corpus
+
+build_corpus.py            Corpus generation script (reference and regeneration)
+
+tests/                     43 tests spanning schemas, tools, agents, orchestration, ablation
+
+examples/                  Sample offline run output and ablation report
+
+
+
+
+KNOWN LIMITATIONS AND DESIGN TRADE-OFFS
+
+- The offline MockLLMClient produces plausible, schema-valid, but templated text. It faithfully demonstrates pipeline mechanics—agent hand-offs, scoring mathematics, the iteration loop, and ablation comparisons—yet hypothesis content quality should be assessed using the live mode (--live) against a real language model.  
+
+- The local literature corpus is synthetic by design. For research-grade deployments, the retrieval backend of tools/corpus_search.py can be replaced by a real literature API (Semantic Scholar, arXiv, etc.) while preserving the identical CorpusIndex.search() interface.  
+
+- Toy simulations are intentionally simple order-of-magnitude sanity checks (e.g., bare Arrhenius models). They are not substitutes for density-functional theory, molecular dynamics, or laboratory experimentation.
+
+
+HypothesisForge is more than a multi-agent demo. It is an experimental apparatus for studying whether structured critique and iterative revision can elevate the quality of machine-generated scientific hypotheses in a domain where precision, novelty, and feasibility truly matter.
+
+
+
+
+
+
+
+
+
+
+
+
+
